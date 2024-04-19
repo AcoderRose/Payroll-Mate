@@ -20,9 +20,9 @@
 
 ## Usage
 
-[Link to Deployed Website]
+[Link to Deployed Website](https://acoderrose.github.io/Payroll-Mate/)
 
-[Link to github repository]
+[Link to github repository](https://github.com/AcoderRose/Payroll-Mate)
 
 ## Collaborators
 
