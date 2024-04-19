@@ -16,7 +16,7 @@
 
 ## Screenshot
 
-![screenshotofwebsite]
+![screenshotofwebsite](./assets/images/screenshot-of-website.png)
 
 ## Usage
 
