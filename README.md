@@ -16,7 +16,7 @@
 
 ## Screenshot
 
-![screenshotofwebsite](./assets/images/screenshot-of-website.png)
+![screenshotofwebsite](./assets/images/payroll-screenshot.png)
 
 ## Usage
 
