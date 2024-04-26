@@ -11,32 +11,31 @@ const collectEmployees = function () {
   while (addAnotherEmployee) {
     let firstName = prompt("Enter employee's first name");
 
-    let firstNameIsANumber = !isNaN(firstName);
-
-    if (firstNameIsANumber) {
-      alert("Enter letters only do not enter numbers please.");
+    // Validate first name input (alphabetic characters only)
+    while (!/^[a-zA-Z]+$/.test(firstName)) {
+      alert("Please enter letters only for the first name.");
       firstName = prompt("Re-Enter employee's first name");
     }
 
     let lastName = prompt("Enter employee's last name");
 
-    let lastNameIsANumber = !isNaN(lastName);
-
-    if (lastNameIsANumber) {
-      alert("Enter letters only do not enter numbers please.");
-      lastName = prompt("Enter employee's last name");
+    // Validate last name input (alphabetic characters only)
+    while (!/^[a-zA-Z]+$/.test(lastName)) {
+      alert("Please enter letters only for the last name.");
+      lastName = prompt("Re-Enter employee's last name");
     }
 
-    const salary = prompt("Enter employee's salary");
+    let salary = prompt("Enter employee's salary");
 
-    firstName = firstName[0].toUpperCase() + firstName.slice(1);
-    lastName = lastName[0].toUpperCase() + lastName.slice(1);
+    while (isNaN(salary)) {
+      salary = prompt("Enter employee's salary (numbers only)");
+    }
 
     //constructed employee object that adds to array.
-    let employee = {
+    const employee = {
       firstName: firstName,
       lastName: lastName,
-      salary: salary,
+      salary: parseFloat(salary),
     };
 
     employees.push(employee);
@@ -116,8 +115,8 @@ const displayEmployees = function (employeesArray) {
   }
 };
 
-const trackEmployeeData = function () {
-  const employees = collectEmployees();
+let trackEmployeeData = function () {
+  let employees = collectEmployees();
 
   console.table(employees);
 
